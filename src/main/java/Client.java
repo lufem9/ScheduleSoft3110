@@ -32,7 +32,7 @@ public class Client
     public String getAddress(){return Address;}
 
     public String sql;
-    public void geta1(){  this.sql = "SELECT ApptId FROM Appointments WHERE patId = '" + getId() +"'";}
+    public void geta1(){  this.sql = "SELECT AId FROM appointment WHERE CId = '" + getId() +"'";}
 
 
     //=============Customer default constructor=================
@@ -85,19 +85,20 @@ public class Client
                 setEmail(rs.getString(6));
             }
             // a1.SelectDB(Id);
-
+            System.out.println("================Client Appointment list======================");
             geta1();
             String an;
             System.out.println(this.sql);
-           /* ResultSet rs1 = stmt.executeQuery(this.sql);
+           ResultSet rs1 = stmt.executeQuery(this.sql);
             while(rs1.next()){
                 an = rs1.getString(1);
                 System.out.println(an);
                 a1.SelectDB(an);
+                a1.display();
             }
             //Closing DataBase
             stmt.close();
-*/
+
         }catch(SQLException es){
             System.out.println(es);
         }
@@ -152,21 +153,6 @@ public class Client
                 + "\n Last Name = " + getLastName()
                 + "\n Email = " + getEmail()
                 + "\n Address = " + getAddress());
-        a1.display();
     }//End of display method
 
-    public static void main(String[] args) {
-
-        Client c2 = new Client();
-        c2.insertDB( "1023","5678","Joseph","David","JDavid@yahoo.com","8833 Victory Avenue windsor");
-        /*c2.SelectDB("1022");
-        c2.deleteDB();
-        c2.setPassword("1234");
-        c2.setFirstName("Abdul");
-        c2.setLastName("Smith");
-        c2.setEmail("ASmith@yahoo.com");
-        c2.setAddress("2134 huron Church windsor");
-        c2.updateDB();
-        c2.display();*/
-    }
 }//End of Class

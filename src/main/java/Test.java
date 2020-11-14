@@ -1,9 +1,9 @@
 public class Test {
     public static void main(String[] args)
     {
-       // Client c2 = new Client();
+        Client c2 = new Client();
         //c2.insertDB( "1023","5678","Joseph","David","JDavid@yahoo.com","8833 Victory Avenue windsor");
-       // c2.SelectDB("1022");
+        //c2.SelectDB("1022");
         /*c2.deleteDB();
         c2.setPassword("1234");
         c2.setFirstName("Abdul");
@@ -31,14 +31,19 @@ public class Test {
         //entity e2 = new entity();
         //e2.insertDB( "4011","Star","info@star.ca",519311678,"2728 Tecumseh Windsor");
         //e2.SelectDB("4011");
-        //Appointment a1 = new Appointment();
+        Appointment a1 = new Appointment();
         //Appointment a2 = new Appointment();
-        //a1.insertDB("2011","2020-12-17","10:15","10:45", c2.getId(), e1.getId());
+        //a1.insertDB("2013","2020-12-17","10:15","10:45", c2.getId(), e1.getId());
         //a2.insertDB("2012","2021-01-05","08:00","09:30", c1.getId(), e2.getId());
         //a2.SelectDB("2012");
         //a2.setAppDy("2021-02-02");
         //a2.updateDB();
         //a2.display();
         //a2.deleteDB();
+
+        c2.SelectDB("1022");
+        System.out.println("================Client Details======================");
+        c2.display();
+        //a1.SelectDB("2012");
     }
 }
